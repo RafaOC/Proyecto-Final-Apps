@@ -10,7 +10,8 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
+  },
+  {
     path: 'historia',
     loadChildren: () => import('./historia/historia.module').then( m => m.HistoriaPageModule)
   },
@@ -45,6 +46,10 @@ const routes: Routes = [
   {
     path: 'acerca-de',
     loadChildren: () => import('./acerca-de/acerca-de.module').then( m => m.AcercaDePageModule)
+  },
+  {
+    path: 'miembros',
+    loadChildren: () => import('./miembros/miembros.module').then( m => m.MiembrosPageModule)
   },
 
 ];
