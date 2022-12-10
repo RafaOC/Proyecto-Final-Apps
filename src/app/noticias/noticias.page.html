@@ -8,5 +8,23 @@
 </ion-header>
 
 <ion-content>
+  <ion-card>
+    <ion-item class="ion-text-center" lines="none">
+      <h2 >Noticias mas recientes</h2>
+    </ion-item>
 
+    <ion-card  *ngFor="let noticias of listaNoticias">
+      <img [src]="noticias['foto']">
+      <ion-card-header>
+        <ion-card-title>{{ noticias['titulo'] }}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <p><strong>Hecho ocurrido el {{ noticias['fecha'] }}</strong> </p><hr>
+        <p>{{ noticias['contenido'] }}</p>
+      </ion-card-content>
+    </ion-card>
+
+  </ion-card>
+ 
 </ion-content>
