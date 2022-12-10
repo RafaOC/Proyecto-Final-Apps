@@ -9,4 +9,28 @@
 
 <ion-content>
 
+  <ion-card>
+    <ion-item class="ion-text-center" lines="none">
+      <h2>Diferentes Servicios</h2>
+    </ion-item>
+
+    <ion-accordion-group [multiple]="true" [value]="['first', 'third']" *ngFor="let serv of lista">
+
+      <ion-accordion value="first" >
+
+        <ion-item slot="header" color="warning">
+          {{ serv['nombre'] }}
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <p><strong>Descripcion:</strong> {{ serv['descripcion'] }}</p>
+          <img [src]="serv['foto']">
+        </div>
+
+      </ion-accordion>
+
+    </ion-accordion-group>
+
+  </ion-card>
+  
+
 </ion-content>

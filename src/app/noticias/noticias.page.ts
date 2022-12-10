@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+//importaciones 
+import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-noticias',
   templateUrl: './noticias.page.html',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoticiasPage implements OnInit {
 
-  constructor() { }
+  public listaNoticias = [];
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    this.obtenerNoticias();
+  }
+
+  obtenerNoticias(){
+    this.http
+    .get<any>(
+      'https://adamix.net/defensa_civil/def/noticias.php'
+    )
+    .subscribe((res) => {
+      this.listaNoticias = res.datos;
+      console.log(this.listaNoticias);
+    });
   }
 
 }

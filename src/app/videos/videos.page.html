@@ -9,4 +9,23 @@
 
 <ion-content>
 
+  <ion-card>
+    <ion-item class="ion-text-center" lines="none">
+      <h2 >Videos Informativos</h2>
+    </ion-item>
+
+    <ion-card  *ngFor="let videos of listaVideos">
+      <iframe width="100%" height="100%" [src]='this.transform(videos.link)'></iframe>
+      <ion-card-header>
+        <ion-card-title>{{ videos['titulo'] }}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <p><strong>Fecha:</strong> {{ videos['fecha'] }}</p>
+        <p><strong>Descripcion:</strong> {{ videos['descripcion'] }}</p>
+      </ion-card-content>
+    </ion-card>
+
+  </ion-card>
+
 </ion-content>
