@@ -1,21 +1,36 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-menu-button color="primary" name="menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title id="titulo" >
+      <ion-img src="assets/img/defen.png" ></ion-img>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+<ion-content [fullscreen]="true" >
+  <ion-header collapse="condense" >
+    <ion-toolbar color="warning">
+      <ion-title size="large">
+      </ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
+ <!--  <div id="container">
     <strong>Pagina de prueba</strong>
     <strong>Texto de prueba</strong>
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
+</ion-content> -->
+
+<ion-content>
+  <ion-slides [options]="slideOpts">
+   <ion-slides *ngFor="let img of banners">
+    <img [src] =img class="d-block w-10" alt="..." style="height: 400px;  border-radius: 1rem ! important;" />
+  </ion-slides>
+</ion-slides>
+
+
 </ion-content>
+

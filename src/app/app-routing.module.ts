@@ -10,7 +10,43 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'historia',
+    loadChildren: () => import('./historia/historia.module').then( m => m.HistoriaPageModule)
   },
+  {
+    path: 'servicios',
+    loadChildren: () => import('./servicios/servicios.module').then( m => m.ServiciosPageModule)
+  },
+  {
+    path: 'noticias',
+    loadChildren: () => import('./noticias/noticias.module').then( m => m.NoticiasPageModule)
+  },
+  {
+    path: 'videos',
+    loadChildren: () => import('./videos/videos.module').then( m => m.VideosPageModule)
+  },
+  {
+    path: 'albergues',
+    loadChildren: () => import('./albergues/albergues.module').then( m => m.AlberguesPageModule)
+  },
+  {
+    path: 'mapa',
+    loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
+  },
+  {
+    path: 'medidas-prev',
+    loadChildren: () => import('./medidas-prev/medidas-prev.module').then( m => m.MedidasPrevPageModule)
+  },
+  {
+    path: 'quiero-ser',
+    loadChildren: () => import('./quiero-ser/quiero-ser.module').then( m => m.QuieroSerPageModule)
+  },
+  {
+    path: 'acerca-de',
+    loadChildren: () => import('./acerca-de/acerca-de.module').then( m => m.AcercaDePageModule)
+  },
+
 ];
 
 @NgModule({

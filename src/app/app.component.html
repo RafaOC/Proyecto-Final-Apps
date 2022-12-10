@@ -1,3 +1,83 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+
+  <ion-menu side="start" menuId="menu" contentId="principal">
+    <ion-header>
+      <ion-toolbar color="warning">
+        <ion-title style="text-align: center;">
+          <ion-img src="assets/img/logo.png" style="height: 70px;" ></ion-img>
+           Menu 
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+
+      <ion-list >
+        <ion-menu-toggle >
+          <ion-item routerLink="home">Inicio
+              <ion-icon slot="start" name="arrow-forward"></ion-icon> 
+         </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item routerLink="historia">Historia 
+            <ion-icon slot="start" name="time"></ion-icon> 
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item routerLink="servicios">Servicios 
+            <ion-icon slot="start" name="medkit"></ion-icon> 
+        </ion-item>
+      </ion-menu-toggle>
+         
+      <ion-menu-toggle>
+        <ion-item routerLink="noticias">Noticias
+            <ion-icon slot="start" name="megaphone"></ion-icon> 
+        </ion-item>
+      </ion-menu-toggle>
+       
+      <ion-menu-toggle>
+        <ion-item routerLink="videos">Videos 
+            <ion-icon slot="start" name="logo-youtube"></ion-icon> 
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item routerLink="albergues">Albergues 
+            <ion-icon slot="start" name="home"></ion-icon> 
+        </ion-item>
+      </ion-menu-toggle>
+        
+      <ion-menu-toggle>
+        <ion-item routerLink="mapa">Mapa 
+            <ion-icon slot="start" name="map"></ion-icon> 
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item routerLink="medidas-prev">Medidas Preventivas 
+            <ion-icon slot="start" name="warning"></ion-icon> 
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item routerLink="quiero-ser">Quiero Ser Voluntario 
+            <ion-icon slot="start" name="clipboard"></ion-icon> 
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item routerLink="acerca-de">Acerca de  
+            <ion-icon slot="start" name="people"></ion-icon> 
+        </ion-item>
+      </ion-menu-toggle>
+    
+
+      </ion-list>
+
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="principal"></ion-router-outlet>
+
 </ion-app>
