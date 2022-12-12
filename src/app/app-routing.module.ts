@@ -50,25 +50,18 @@ const routes: Routes = [
   {
     path: 'miembros',
     loadChildren: () => import('./miembros/miembros.module').then( m => m.MiembrosPageModule)
-  },  {
+  },
+  {
     path: 'iniciar-sesion',
     loadChildren: () => import('./iniciar-sesion/iniciar-sesion.module').then( m => m.IniciarSesionPageModule)
   },
   {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    path: 'cambiar-pass',
+    loadChildren: () => import('./cambiar-pass/cambiar-pass.module').then( m => m.CambiarPassPageModule)
   },
   {
-    path: 'reportar-situacion',
-    loadChildren: () => import('./reportar-situacion/reportar-situacion.module').then( m => m.ReportarSituacionPageModule)
-  },
-  {
-    path: 'mis-situaciones',
-    loadChildren: () => import('./mis-situaciones/mis-situaciones.module').then( m => m.MisSituacionesPageModule)
-  },
-  {
-    path: 'mapa-situaciones',
-    loadChildren: () => import('./mapa-situaciones/mapa-situaciones.module').then( m => m.MapaSituacionesPageModule)
+    path: 'tab-inicial',
+    loadChildren: () => import('./tab-inicial/tab-inicial.module').then( m => m.TabInicialPageModule)
   },
 
 

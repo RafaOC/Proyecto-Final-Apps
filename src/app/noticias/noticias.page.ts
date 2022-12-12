@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 //importaciones 
 import { HttpClient } from '@angular/common/http';
+import { MapControllerService } from '../services/map-controller.service';
 
 @Component({
   selector: 'app-noticias',
@@ -27,6 +28,7 @@ export class NoticiasPage implements OnInit {
       this.listaNoticias = res.datos;
       console.log(this.listaNoticias);
     });
+
   }
 
 }
