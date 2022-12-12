@@ -24,30 +24,28 @@
 
     <div heading-colum-lr>
       <h1 big-heading>Login</h1>
-      <h2 small-heading>SING UP</h2>
+      <!-- <h2 small-heading>SING UP</h2> -->
     </div>
     <ion-label>
-      Introduzca usuario
+      Introduzca su cedula
     </ion-label>
 
     <ion-item transparent>
      <!--  <img icon-small src="assets/img/user.png"/>-->
      <ion-icon slot="start" name="person"></ion-icon>
-      <ion-input placeholder="Usuario" type="text"></ion-input>
+      <ion-input [(ngModel)]="cedula" placeholder="Cedula" type="text"></ion-input>
     </ion-item>
 
 
     <ion-item transparent>
       <!--  <img icon-small src="assets/img/user.png"/>-->
       <ion-icon slot="start" name="key"></ion-icon>
-       <ion-input placeholder="Contraseña" type="text"></ion-input>
+       <ion-input [(ngModel)]="clave" placeholder="Contraseña" type="text"></ion-input>
      </ion-item>
-     <ion-label class="forget-password">Contraseña olvidada</ion-label>
+     <ion-label (click)="passPage()" class="forget-password">¿Contraseña olvidada?</ion-label>
 
      <div linespace></div>
-     <ion-button color="warning" class="ion-button-clas" shape="round" fill="solid" size="large" expand="block" >Login</ion-button>
-     <a href="quiero-ser" s>Crear cuenta</a>
+     <ion-button (click)="iniciarSesion()" color="warning" class="ion-button-clas" shape="round" fill="solid" size="large" expand="block" >Inicia Sesión</ion-button>
+     <a (click)="registroPage()">¿No tienes una cuenta? Únete ahora, aquí</a>
   </div>
-
-
 </ion-content>
