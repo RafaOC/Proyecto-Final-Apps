@@ -50,7 +50,15 @@ const routes: Routes = [
   {
     path: 'miembros',
     loadChildren: () => import('./miembros/miembros.module').then( m => m.MiembrosPageModule)
+  },  {
+    path: 'iniciar-sesion',
+    loadChildren: () => import('./iniciar-sesion/iniciar-sesion.module').then( m => m.IniciarSesionPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+
 
 ];
 

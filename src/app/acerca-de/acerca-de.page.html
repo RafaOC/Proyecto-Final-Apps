@@ -9,159 +9,66 @@
 
 <ion-content>
 
-  <!-- Scott Section -->
-  <ion-card color="warning">
-    <ion-card-header (click)="reylisFun()" >
-      <ion-card-title>Reylis Hernandez</ion-card-title>
-    </ion-card-header>
-
-    <ion-card-content *ngIf="reylis">
-      <img src="assets/img/me.jpeg" (click)="ocultar()"/>
-
-      <ion-list (click)="ocultar()">
-
-        <!--<ion-item>
-          <img src="assets/image/me.jpeg"/>
-      
-        </ion-item> -->
-        <ion-item>
-          <label>Nombre : Reylis Francisco</label> 
-        </ion-item>
-      
-        <ion-item>
-          <label>Apellido : Hernandez Avila</label> 
-        </ion-item>
-
-        <ion-item>
-          <label>Telefono: 829-683-2546</label> 
-        </ion-item>
-        
-        <ion-item>
-          <label>Telegram: <a href="">https://t.me/rfh29</a> </label> 
-        </ion-item>
-
-
-      </ion-list>
-
-     <!--<p (click)="ocultar()">
-        Scott McCall es el protagonista de la serie T . Scott es un hombre lobo, pasando de beta a un alfa creando la Manada de Scott  
-        y la serie gira a como el intenta sufrir una nueva condición tras la mordedura del alfa en ese entonces Peter Hale
-      </p>
-      <br />
-      <h2 (click)="ocultar()"></h2>
-      <br />
-      <p (click)="ocultar()">
-        Scott era un joven promedio, estudiante de 16 años, quien requería el uso constante de un inhalador médico por ser asmático. 
-        Un día decide ir junto a su mejor amigo, Stiles  a la escena del crimen donde hay varias policías; después de quedarse solo en el bosque es atacado 
-        por una extraña criatura con forma de lobo, quien lo muerde en el abdomen gravemente, incidente que le de la condición de Hombre Lobo
-      <br/>
-      <p (click)="ocultar()">
-        Después de adquirir esta condición aumentan sus habilidades físicas y se cura definitivamente del asma que lo afectó toda la vida.
-      </p>-->
-    </ion-card-content>
-  </ion-card>
-
-<!-- Rafael Section -->
   <ion-card>
-    <ion-card-header (click)="rafaelFun()" >
-      <ion-card-title>Rafael Ortiz</ion-card-title>
-    </ion-card-header>
+    <ion-item class="ion-text-center" lines="none">
+      <h2>Developers del proyecto</h2>
+    </ion-item>
 
-    <ion-card-content *ngIf="rafael">
-      <img src="assets/img/rafael.jpeg" (click)="ocultar()"/>
+    <ion-accordion-group [multiple]="true" >
 
+      <ion-accordion value="first" >
 
-      <ion-list (click)="ocultar()">
-
-        <!--<ion-item>
-          <img src="assets/image/me.jpeg"/>
-      
-        </ion-item> -->
-        <ion-item>
-          <label>Nombre : Rafael</label> 
+        <ion-item slot="header" color="warning">
+          Frontend Developer
         </ion-item>
-      
-        <ion-item>
-          <label>Apellido : Ortiz Calcaño </label> 
-        </ion-item>
+        <div class="ion-padding" slot="content">
+          
+          - Nombre: Reylis<br>
+          - Apellido: Hernandez<br>
+          - telefono : 829-683-2546 <br>
+          - telegram : <a href="">https://t.me/rfh29</a><br>
+          <img src="assets/img/me.jpeg" />
+         
+        </div>
 
-        <ion-item>
-          <label>Telefono: 829-505-5485 </label> 
+      </ion-accordion>
+
+      <ion-accordion value="second" >
+
+        <ion-item slot="header" color="warning">
+          Backend Developer
         </ion-item>
+        <div class="ion-padding" slot="content">
+          
+          - Nombre: Rafael<br>
+          - Apellido: Ortiz calacaño<br>
+          - telefono : 829-505-5485 <br>
+          - telegram : <a href="">https://t.me/ROC23OO</a><br>
+          <img src="assets/img/rafael.jpeg" />
+         
+        </div>
         
-        <ion-item>
-          <label>Telegram: <a href="">https://t.me/ROC23OO</a></label> 
+      </ion-accordion>
+
+      <ion-accordion value="third" >
+
+        <ion-item slot="header" color="warning">
+          Backend Developer
         </ion-item>
+        <div class="ion-padding" slot="content">
+          
+          - Nombre: Euris Alexander<br>
+          - Apellido: Aquino <br>
+          - telefono : 829-983-6038  <br>
+          - telegram : <a href="">https://t.me/EurisAquino</a><br>
+          <img src="assets/img/euri.jpeg" />
+         
+        </div>
+        
+      </ion-accordion>
 
+    </ion-accordion-group>
 
-      </ion-list>
-     <!-- <p (click)="ocultar()">
-        Stiles Stilinski es estudiante de la Escuela secundaria Beacon hills y hace parte del equipo de lacrosse.
-      </p>
-      <br />
-      <h2 (click)="ocultar()"></h2>
-      <br />
-      <p (click)="ocultar()">
-        Es hijo del alguacil Stilinski y de Claudia Stilinski. Su madre murió cuando él era pequeño, 
-        haber estado presente mientras ella moría ha hecho más difícil que supere la situación, además lo hace sentirse en algunas ocasiones responsable del hecho.
-      <br/>
-      <p (click)="ocultar()">
-        Es el mejor amigo y confidente de Scott McCall, a quien apoyó cuando se convirtió en Hombre Lobo, desde entonces lo ha ayudado con todos los casos sobrenaturales que los rodean.<br/>
-
-        Desde niño ha estado enamorado de Lydia Martin, pero ella nunca le prestó atención por ser nerd e impopular, sin embargo, la relación entre los dos ha crecido recientemente, 
-        pero no ha pasado de una gran amistad.
-      </p>-->
-    </ion-card-content>
   </ion-card>
   
-<!-- Euris Section -->
-<ion-card>
-  <ion-card-header (click)="eurisFun()" >
-    <ion-card-title>Euris Aquino</ion-card-title>
-  </ion-card-header>
-
-  <ion-card-content *ngIf="euris">
-    <img src="/assets/img/euri.jpeg" (click)="ocultar()"/>
-
-    <ion-list (click)="ocultar()">
-
-      <!--<ion-item>
-        <img src="assets/image/me.jpeg"/>
-    
-      </ion-item> -->
-      <ion-item>
-        <label>Nombre : Euris Alexander </label> 
-      </ion-item>
-    
-      <ion-item>
-        <label>Apellido : Aquino Ulloa</label> 
-      </ion-item>
-
-      <ion-item>
-        <label>Telefono: 829-983-6038</label> 
-      </ion-item>
-      
-      <ion-item>
-        <label>Telegram: <a href="">https://t.me/EurisAquino</a></label> 
-      </ion-item>
-
-
-    </ion-list>
-    <!--<p (click)="ocultar()">
-      Hija del Sr . y la Sra. Tate, sufre un accidente ocho años atrás, donde mueren su madre y su hermana, donde se presume que ella murió también, 
-      sin embargo, su cuerpo nunca apareció. En realidad, Malia se convirtió, de manera no explicada aún, en un Coyote, lo que causó el accidente.
-       Debido al impacto quedó convertida de manera permanente en coyote y vivió en el bosque por los últimos años.
-    </p>
-    <br />
-    <h2 (click)="ocultar()"></h2>
-    <br />
-    <p (click)="ocultar()">
-      Es descubierta ocho años después y liberada de su condición por Scott McCall, teniendo que adapatarse nuevamente a ser un humano.
-    <br/>
-    <p (click)="ocultar()">
-      Lydia Martin descubre que, posiblemente, Malia sea en verdad hija de Peter Hale.
-    </p>-->
-  </ion-card-content>
-</ion-card>
-
 </ion-content>

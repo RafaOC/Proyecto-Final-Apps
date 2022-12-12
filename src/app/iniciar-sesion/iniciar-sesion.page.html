@@ -1,0 +1,53 @@
+<!--<ion-header>
+  <ion-toolbar color="warning">
+  <ion-buttons slot="start">
+    <ion-menu-button color="primary" name="menu"></ion-menu-button>
+  </ion-buttons>
+  <ion-title id="titulo" > Iniciar sesion 
+  </ion-title>
+</ion-toolbar>-->
+<ion-header no-border>
+  <div class="login-header ion-padding">
+    <ion-buttons slot="star">
+      <ion-menu-button color="primary" name="menu"></ion-menu-button>
+    </ion-buttons>
+    <img class="logo-img" src="assets/img/logo.png">
+
+  </div>
+
+</ion-header>
+ 
+
+<ion-content>
+
+  <div class="center">
+
+    <div heading-colum-lr>
+      <h1 big-heading>Login</h1>
+      <h2 small-heading>SING UP</h2>
+    </div>
+    <ion-label>
+      Introduzca usuario
+    </ion-label>
+
+    <ion-item transparent>
+     <!--  <img icon-small src="assets/img/user.png"/>-->
+     <ion-icon slot="start" name="person"></ion-icon>
+      <ion-input placeholder="Usuario" type="text"></ion-input>
+    </ion-item>
+
+
+    <ion-item transparent>
+      <!--  <img icon-small src="assets/img/user.png"/>-->
+      <ion-icon slot="start" name="key"></ion-icon>
+       <ion-input placeholder="Contraseña" type="text"></ion-input>
+     </ion-item>
+     <ion-label class="forget-password">Contraseña olvidada</ion-label>
+
+     <div linespace></div>
+     <ion-button color="warning" class="ion-button-clas" shape="round" fill="solid" size="large" expand="block" >Login</ion-button>
+     <a href="quiero-ser" s>Crear cuenta</a>
+  </div>
+
+
+</ion-content>
