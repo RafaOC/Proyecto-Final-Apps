@@ -58,6 +58,18 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'reportar-situacion',
+    loadChildren: () => import('./reportar-situacion/reportar-situacion.module').then( m => m.ReportarSituacionPageModule)
+  },
+  {
+    path: 'mis-situaciones',
+    loadChildren: () => import('./mis-situaciones/mis-situaciones.module').then( m => m.MisSituacionesPageModule)
+  },
+  {
+    path: 'mapa-situaciones',
+    loadChildren: () => import('./mapa-situaciones/mapa-situaciones.module').then( m => m.MapaSituacionesPageModule)
+  },
 
 
 ];
