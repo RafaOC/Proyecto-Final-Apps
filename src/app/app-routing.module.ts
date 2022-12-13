@@ -56,10 +56,6 @@ const routes: Routes = [
     loadChildren: () => import('./iniciar-sesion/iniciar-sesion.module').then( m => m.IniciarSesionPageModule)
   },
   {
-    path: 'cambiar-pass',
-    loadChildren: () => import('./cambiar-pass/cambiar-pass.module').then( m => m.CambiarPassPageModule)
-  },
-  {
     path: 'tab-inicial',
     loadChildren: () => import('./tab-inicial/tab-inicial.module').then( m => m.TabInicialPageModule)
   },
