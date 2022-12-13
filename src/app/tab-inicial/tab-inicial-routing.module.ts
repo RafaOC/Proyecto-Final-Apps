@@ -24,6 +24,10 @@ const routes: Routes = [
         path: 'noticias',
         loadChildren: () => import('./../noticias/noticias.module').then( m => m.NoticiasPageModule)
       },
+      {
+        path: 'cambiar-pass',
+        loadChildren: () => import('./../cambiar-pass/cambiar-pass.module').then( m => m.CambiarPassPageModule)
+      },
     ]
   }
 ];

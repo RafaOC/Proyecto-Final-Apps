@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit{
 
-  banners: string [] = ["assets/img/1.jpg","assets/img/2.jpg","assets/img/3.jpeg","assets/img/bmw.jpeg","assets/img/bmw2.jpg"];
+  banners: string [] = ["assets/img/dc2.jpg","assets/img/dc5.jpeg","assets/img/dc3.jpeg","assets/img/dc6.jpg","assets/img/dc8.jpg"];
 
   slideOpts = {
     initialSlide : 1,

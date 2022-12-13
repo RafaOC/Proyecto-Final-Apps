@@ -1,12 +1,64 @@
-<ion-header>
+<!--<ion-header>
   <ion-toolbar color="warning">
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="iniciar-sesion"></ion-back-button>
+  <ion-buttons slot="start">
+    <ion-menu-button color="primary" name="menu"></ion-menu-button>
+  </ion-buttons>
+  <ion-title id="titulo" > Iniciar sesion
+  </ion-title>
+</ion-toolbar>-->
+<ion-header no-border>
+  <div class="login-header ion-padding">
+    <ion-buttons slot="star">
+      <ion-menu-button color="primary" name="menu"></ion-menu-button>
+      <h3 style="margin-left: 17%;">Registro</h3>
     </ion-buttons>
-    <ion-title>Quiero ser voluntario</ion-title>
-  </ion-toolbar>
+  </div>
 </ion-header>
 
 <ion-content>
 
+  <div class="center" style="margin-top:50px">
+
+    <ion-item transparent>
+     <!--  <img icon-small src="assets/img/user.png"/>-->
+     <ion-icon slot="start" name="person"></ion-icon>
+      <ion-input [(ngModel)]="cedula" placeholder="Cedula" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item transparent>
+        <!--  <img icon-small src="assets/img/user.png"/>-->
+        <ion-icon slot="start" name="person"></ion-icon>
+         <ion-input [(ngModel)]="nombre" placeholder="Nombre" type="text"></ion-input>
+       </ion-item>
+
+           <ion-item transparent>
+        <!--  <img icon-small src="assets/img/user.png"/>-->
+        <ion-icon slot="start" name="person"></ion-icon>
+         <ion-input [(ngModel)]="apellido" placeholder="Apellido" type="text"></ion-input>
+       </ion-item>
+
+    <ion-item transparent>
+      <!--  <img icon-small src="assets/img/user.png"/>-->
+      <ion-icon slot="start" name="key"></ion-icon>
+       <ion-input [(ngModel)]="clave" placeholder="Contraseña" type="password"></ion-input>
+     </ion-item>
+
+     <ion-item transparent>
+        <!--  <img icon-small src="assets/img/user.png"/>-->
+        <ion-icon slot="start" name="person"></ion-icon>
+         <ion-input [(ngModel)]="correo" placeholder="Correo" type="text"></ion-input>
+       </ion-item>
+
+       <ion-item transparent>
+        <!--  <img icon-small src="assets/img/user.png"/>-->
+        <ion-icon slot="start" name="person"></ion-icon>
+         <ion-input [(ngModel)]="telefono" placeholder="Telefono" type="text"></ion-input>
+       </ion-item>
+
+
+    <br><br> <ion-label (click)="iniciarSesion()" class="forget-password">Ir a iniciar sesion</ion-label><br><br>
+
+     <div linespace></div>
+     <ion-button (click)="registrar()" color="warning" class="ion-button-clas" shape="round" fill="solid" size="large" expand="block" >Registrar</ion-button>
+  </div>
 </ion-content>
