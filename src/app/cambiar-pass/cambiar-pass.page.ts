@@ -51,6 +51,7 @@ export class CambiarPassPage implements OnInit {
       //Almacernar el token en el service 'MapControllerService'
       //this.toke.token = res.datos.token;
       this.token = this.toke.token;
+      console.log(this.token + " " + "TOKEN");
       //variable para almacenar el mensaje
       this.mensaje = res.mensaje;
       //Boolean para saber si las credenciales son correctas
@@ -88,7 +89,7 @@ export class CambiarPassPage implements OnInit {
     const credenciales: registrar = {
       clave_anterior: this.clave_anterior,
       clave_nueva: this.clave_nueva,
-      token: this.token
+      token:this.toke.token
     };
     console.log(credenciales);
     this.cambiarPass(credenciales);
