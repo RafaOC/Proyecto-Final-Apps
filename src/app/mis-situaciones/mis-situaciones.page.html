@@ -1,12 +1,62 @@
-<ion-header>
+<!--<ion-header>
   <ion-toolbar color="warning">
-    <ion-buttons slot="start">
-      <ion-menu-button color="primary" name="menu"></ion-menu-button>
+  <ion-buttons slot="start">
+    <ion-menu-button color="primary" name="menu"></ion-menu-button>
+  </ion-buttons>
+  <ion-title id="titulo" > Iniciar sesion
+  </ion-title>
+</ion-toolbar>-->
+<ion-header no-border>
+  <div class="login-header ion-padding" style="background-color: orange; color: black;">
+    <ion-buttons slot="star">
+      <ion-menu-button color="black" name="menu"></ion-menu-button>
+      <h3 style="margin-left: 7%;">Mis situaciones</h3>
     </ion-buttons>
-    <ion-title>Mis situaciones</ion-title>
-  </ion-toolbar>
+  </div>
 </ion-header>
 
+<!-- <br><br> <ion-label (click)="iniciarSesion()" class="forget-password">Ir a iniciar sesion</ion-label><br><br> -->
 <ion-content>
 
+  <ion-button (click)="iniciarSesion()" color="warning">
+  <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+</ion-button>
+
+  <div class="center" style="margin-top:50px">
+     <div linespace></div>
+     <ion-button (click)="situaciones()" color="warning" class="ion-button-clas" shape="round" fill="solid" size="large" expand="block" >Cargar</ion-button>
+  </div>
+
+  <ion-list>
+    <ion-item  *ngFor ="let data of lista" >
+      <ion-card>
+      <ion-card-content>
+        <div>
+          <ion-accordion-group>
+            <ion-accordion value="first">
+              <ion-item slot="header" color="light" style="width: 300px;">
+                <ion-label>{{data.titulo}}</ion-label>
+              </ion-item>
+              <div class="ion-padding" slot="content">
+                <img src="{{data.foto}}" width="250" height="150"><br><br>
+                <b>Voluntario:</b><br>
+                {{data.voluntario}}<br><br>
+                <b>Descripcion:</b><br>
+                {{data.descripcion}}<br>
+                <b>Latitud:</b><br>
+                {{data.latitud}}<br>
+                <b>Longitud:</b><br>
+                {{data.longitud}}<br>
+                <b>Estado:</b><br>
+                {{data.estado}}<br>
+                <b>Fecha:</b><br>
+                {{data.fecha}}<br>
+              </div>
+            </ion-accordion>
+          </ion-accordion-group>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
+</ion-list>
 </ion-content>
