@@ -22,15 +22,19 @@
     <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
   </ion-button> -->
 
-  <div class="center" style="margin-top:50px">
+  <!-- <div class="center" style="margin-top:50px">
      <div linespace></div>
      <ion-button (click)="situaciones()" color="warning" class="ion-button-clas" shape="round" fill="solid" size="large" expand="block">Ver mis situaciones</ion-button>
-  </div>
+  </div> -->
+
+ 
 
   <ion-list>
     <ion-card>
       <ion-card-header class="ion-text-center"><h1>Listado de situaciones</h1></ion-card-header>
     </ion-card>
+    <ion-button (click)="situaciones()" color="warning" class="ion-button-clas" shape="round" fill="solid" size="large" expand="block">Ver mis situaciones</ion-button>
+
     <ion-item  *ngFor ="let data of lista" >
       <ion-card>
       <ion-card-content>
