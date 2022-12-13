@@ -23,7 +23,6 @@ export class MapaPage implements OnInit {
   public pais: string = '';
   public map!: L.Map;
 
-
   constructor(
     private activatedRoute: ActivatedRoute, 
     private http: HttpClient) {}

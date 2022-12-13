@@ -9,4 +9,46 @@
 
 <ion-content>
 
+  <ion-card>
+    <ion-card-header class="ion-text-center"><h1>Formulario de reporte</h1></ion-card-header>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Titulo</ion-label>
+          <ion-input [(ngModel)]="titulo" placeholder="Introduce un titulo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Descripción</ion-label>
+          <ion-textarea [(ngModel)]="descripcion" placeholder="Introduce una descripcion"></ion-textarea>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Foto</ion-label>
+          <ion-input [(ngModel)]="foto" placeholder="Sube tu foto de prueba"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Latitud</ion-label>
+          <ion-input [(ngModel)]="latitud" placeholder="Introduce la latitud"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Longitud</ion-label>
+          <ion-input [(ngModel)]="longitud" placeholder="Introduce la longitud"></ion-input>
+        </ion-item>
+
+        <div class="container">
+          <div class="center">
+            <ion-button (click)="reportarSituacion()" expand="full">
+              Reportar Situación
+            </ion-button>
+          </div>
+        </div>
+
+      </ion-card-content>
+    </ion-card>
+
+  </ion-card>
 </ion-content>
