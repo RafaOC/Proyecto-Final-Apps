@@ -6,11 +6,14 @@
   <ion-title id="titulo" > Iniciar sesion
   </ion-title>
 </ion-toolbar>-->
-<ion-header no-border>
-  <div class="login-header ion-padding">
-    
+<ion-header>
+  <div class="login-header ion-padding" style="background-color: orange; color: black;">
+    <ion-buttons slot="star">
+      <ion-menu-button color="black" name="menu"></ion-menu-button>
+      <h3 style="margin-left: 7%;">Cambiar Contraseña</h3>
+    </ion-buttons>
   </div>
-</ion-header>
+  </ion-header>
 
 <ion-content>
 
@@ -31,6 +34,6 @@
     <br><br> <ion-label (click)="iniciarSesion()" class="forget-password">Ir a iniciar sesion</ion-label><br><br>
 
      <div linespace></div>
-     <ion-button (click)="cambiarPassword()" color="warning" class="ion-button-clas" shape="round" fill="solid" size="large" expand="block" >Registrar</ion-button>
+     <ion-button (click)="cambiarPassword()" color="warning" class="ion-button-clas" shape="round" fill="solid" size="large" expand="block" >Cambiar contraseña</ion-button>
   </div>
 </ion-content>
