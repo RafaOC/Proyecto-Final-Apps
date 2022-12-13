@@ -6,6 +6,8 @@ import { AlertController } from '@ionic/angular';
 import { reportarSituacion } from '../interfaces/reportar-situacion';
 import { MapControllerService } from '../services/map-controller.service';
 
+import { Camera, CameraResultType, CameraSource, ImageOptions } from "@capacitor/camera";
+
 @Component({
   selector: 'app-reportar-situacion',
   templateUrl: './reportar-situacion.page.html',
@@ -15,12 +17,14 @@ export class ReportarSituacionPage implements OnInit {
 
   public titulo!: string;
   public descripcion!: string;
-  public foto!: string;
+  public foto: string = "fotoprueba";
   public latitud!: string;
   public longitud!: string;
 
   public mensaje!: string;
   public exito!: boolean;
+
+  public base64: any = '';
 
   constructor(
     private http: HttpClient, 
@@ -29,7 +33,23 @@ export class ReportarSituacionPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    Camera.requestPermissions({permissions:['photos']}
+    )
   }
+
+  abrirGaleria(){
+    var options:ImageOptions ={
+      source: CameraSource.Photos,
+      resultType: CameraResultType.DataUrl
+    }
+    Camera.getPhoto(options).then((result) => {
+      this.base64 = result.dataUrl;
+    }, (err) => {
+      alert(err);
+    })
+  }
+
+
 
   reporteEmitido(reporte: reportarSituacion){
     const url = 'https://adamix.net/defensa_civil/def/nueva_situacion.php';
@@ -49,7 +69,6 @@ export class ReportarSituacionPage implements OnInit {
           this.alertaCorrect();
           this.titulo = '';
           this.descripcion = '';
-          this.foto = '';
           this.latitud = '';
           this.longitud = '';
           console.log(this.mensaje + ', Exito = ' + this.exito);
