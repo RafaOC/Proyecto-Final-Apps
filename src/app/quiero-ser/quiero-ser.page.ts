@@ -63,7 +63,7 @@ export class QuieroSerPage implements OnInit {
 
       //validar credenciales del formulario e ir a la siguiente pagina
       if (this.exito == true) {
-        this.router.navigate(['/tab-inicial/noticias']);
+        this.router.navigate(['/iniciar-sesion']);
         console.log(this.mensaje + ' registrado exitosamente! ' + ', Exito = ' + this.exito);
       } else {
         this.alerta();
