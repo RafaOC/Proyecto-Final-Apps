@@ -10,13 +10,11 @@
 <ion-content>
 
   <ion-card>
-    <ion-item class="ion-text-center" lines="none">
-      <h2>Diferentes Servicios</h2>
-    </ion-item>
+    <ion-card-header class="ion-text-center"><h2>Servicios Disponibles</h2></ion-card-header>
 
-    <ion-accordion-group [multiple]="true" [value]="['first', 'third']" *ngFor="let serv of lista">
+    <ion-accordion-group *ngFor="let serv of lista">
 
-      <ion-accordion value="first" >
+      <ion-accordion style="margin: 0.1em;">
 
         <ion-item slot="header" color="warning">
           {{ serv['nombre'] }}

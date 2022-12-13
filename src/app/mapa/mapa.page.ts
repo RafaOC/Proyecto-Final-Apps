@@ -25,10 +25,13 @@ export class MapaPage implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute, 
-    private http: HttpClient) {}
+    private http: HttpClient
+  ) {}
 
+  ngOnInit() {    
+  }
 
-  async ngOnInit() {
+  llamar(){
     const greenIcon = new Icon({
       iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
       shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -37,7 +40,7 @@ export class MapaPage implements OnInit {
       popupAnchor: [1, -34],
       shadowSize: [41, 41]
     });
-    await this.http
+    this.http
       .get<any>('https://adamix.net/defensa_civil/def/albergues.php')
       .subscribe((res) => {
         const albergues = res.datos;
@@ -62,7 +65,6 @@ export class MapaPage implements OnInit {
             .openPopup();
         }
       });
-      
   }
 
   ionViewDidEnter() {

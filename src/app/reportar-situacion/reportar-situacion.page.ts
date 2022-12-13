@@ -39,25 +39,29 @@ export class ReportarSituacionPage implements OnInit {
     for (let k in reporte) {
       data.append(k, reporte[k]);
     }
-    
-    this.http.post<any>(url, data).subscribe((res) => {
-      this.mensaje = res.mensaje;
-      this.exito = res.exito;
 
-      if (this.exito == true) {
-        this.alertaCorrect();
-        this.titulo = '';
-        this.descripcion = '';
-        this.foto = '';
-        this.latitud = '';
-        this.longitud = '';
-        console.log(this.mensaje + ', Exito = ' + this.exito);
-      } else {
-        this.alertaError();
-        console.log('Ha ocurrido un error: ' + this.mensaje + ', Exito = ' +  this.exito);
-      }
-    });
-
+    if (this.longitud != null && this.latitud != null) {
+      this.http.post<any>(url, data).subscribe((res) => {
+        this.mensaje = res.mensaje;
+        this.exito = res.exito;
+  
+        if (this.exito == true) {
+          this.alertaCorrect();
+          this.titulo = '';
+          this.descripcion = '';
+          this.foto = '';
+          this.latitud = '';
+          this.longitud = '';
+          console.log(this.mensaje + ', Exito = ' + this.exito);
+        } else {
+          this.alertaErrorApi();
+          console.log('Ha ocurrido un error: ' + this.mensaje + ', Exito = ' +  this.exito);
+        }
+      });
+    }else{
+      this.alertaError();
+      console.log('Ha ocurrido un error');
+    }
   }
 
   reportarSituacion() {
@@ -75,10 +79,19 @@ export class ReportarSituacionPage implements OnInit {
   async alertaError() {
     const alert = await this.alertController.create({
       header: 'Ha ocurrido un error',
-      message: this.mensaje,
+      message: 'Debe llenar todos los campos',
       buttons: ['OK'],
     });
 
+    await alert.present();
+  }
+
+  async alertaErrorApi() {
+    const alert = await this.alertController.create({
+      header: 'Ha ocurrido un error',
+      message: this.mensaje,
+      buttons: ['OK'],
+    });
     await alert.present();
   }
 
