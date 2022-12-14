@@ -24,3 +24,7 @@ Transformación de la aplicación luego de iniciar sesión, aquí podrá ver Not
 Pantalla Acerca de, aquí se encuentran los desarrolladores del Team Bug Busters
 
 ![image](https://user-images.githubusercontent.com/78857507/207678590-538ad888-00ac-4436-9db0-0bc89459cde4.png)
+
+Logo de la APK
+
+![logo-Team-Busters](https://user-images.githubusercontent.com/78857507/207681802-3741b928-aabf-4a5c-b8e1-e6ae3e0aff5b.png)
