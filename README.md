@@ -17,7 +17,7 @@ Pantalla Mapa (Ubicación de los albergues)
 
 ![image](https://user-images.githubusercontent.com/78857507/207677244-7946d812-2e36-4d54-93e7-3581c3f2992a.png)
 
-Transformación de la aplicación luego de iniciar sesión, aquí podrá ver Noticias: Un listado con las líneas a seguir (api), Reportar Situación, ver Mis situaciones, ver Mapa de situaciones y podrá Cambiar Contraseña.
+Transformación de la aplicación luego de iniciar sesión, aquí podrá ver Noticias: Un listado con las líneas a seguir, Reportar Situación, ver Mis situaciones, ver Mapa de situaciones y podrá Cambiar Contraseña.
 
 ![image](https://user-images.githubusercontent.com/78857507/207677637-392aefd3-3ba5-4de2-bda0-7478795c8e99.png)
 
